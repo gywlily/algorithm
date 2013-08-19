@@ -3,19 +3,19 @@ package com.cc150.tree;
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.cc150.tree.IsBalanceTree;
+import com.cc150.tree.IsBalanceTree_4_1;
 import com.cc150.tree.Node;
 
 public class IsBalenceTreeTest {
 	@Test
 	public void testIsBalence(){
-		IsBalanceTree ibt = new IsBalanceTree();
+		IsBalanceTree_4_1 ibt = new IsBalanceTree_4_1();
 		boolean ret = ibt.isBalance(createBalanceTree());
 		Assert.assertEquals(true, ret);
 	}
 	
 	public void testIsUnBalance(){
-		IsBalanceTree ibt = new IsBalanceTree();
+		IsBalanceTree_4_1 ibt = new IsBalanceTree_4_1();
 		boolean ret = ibt.isBalance(createUnBalanceTree());
 		Assert.assertEquals(false, ret);
 	}

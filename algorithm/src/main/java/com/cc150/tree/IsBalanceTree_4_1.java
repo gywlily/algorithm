@@ -1,6 +1,6 @@
 package com.cc150.tree;
 
-public class IsBalanceTree {
+public class IsBalanceTree_4_1 {
 	public boolean isBalance(Node root){
 		if(root == null) return false;
 		int left = getDepth(root.left);
