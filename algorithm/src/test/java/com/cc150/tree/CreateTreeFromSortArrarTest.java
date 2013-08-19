@@ -16,9 +16,8 @@ public class CreateTreeFromSortArrarTest {
 		expect.right = new Node(5);
 		expect.right.left = new Node(4);
 		expect.right.right =new Node(6);
-		
-		Assert.assertEquals(true, isTreeSame(root, expect));
-		
+
+		Assert.assertEquals(true, isTreeSame(root, expect));		
 	}
 	
 	private boolean isTreeSame(Node actural, Node expect){
