@@ -9,7 +9,7 @@ public class FindNextNodeInOrder_4_6 {
 			else return new Node(Integer.MIN_VALUE);
 		else{
 			Node node = find(root.left, nodeToBeFound);
-			if(node != null)
+			if(node == null)
 				return node;
 			else node = find(node.right, nodeToBeFound);
 			return node;
