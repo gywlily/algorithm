@@ -1,4 +1,4 @@
-package tree;
+package com.cc150.tree;
 
 public class IsBalanceTree {
 	public boolean isBalance(Node root){

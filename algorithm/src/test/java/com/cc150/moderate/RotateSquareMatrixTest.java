@@ -1,7 +1,9 @@
-package moderate;
+package com.cc150.moderate;
 
 import org.junit.Assert;
 import org.junit.Test;
+
+import com.cc150.moderate.RotateSquareMatrix;
 
 public class RotateSquareMatrixTest {
 	@Test

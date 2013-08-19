@@ -1,7 +1,10 @@
-package tree;
+package com.cc150.tree;
 
 import org.junit.Assert;
 import org.junit.Test;
+
+import com.cc150.tree.IsBalanceTree;
+import com.cc150.tree.Node;
 
 public class IsBalenceTreeTest {
 	@Test

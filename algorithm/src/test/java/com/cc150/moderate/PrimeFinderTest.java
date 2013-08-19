@@ -1,9 +1,11 @@
-package moderate;
+package com.cc150.moderate;
 
 import java.util.List;
 
 import org.junit.Assert;
 import org.junit.Test;
+
+import com.cc150.moderate.PrimeFinder;
 
 public class PrimeFinderTest {
 	@Test

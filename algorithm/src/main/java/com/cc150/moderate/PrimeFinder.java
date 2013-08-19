@@ -1,4 +1,4 @@
-package moderate;
+package com.cc150.moderate;
 
 import java.util.Arrays;
 import java.util.LinkedList;

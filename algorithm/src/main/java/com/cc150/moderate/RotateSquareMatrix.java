@@ -1,4 +1,4 @@
-package moderate;
+package com.cc150.moderate;
 
 public class RotateSquareMatrix {
 	public void rotate(int[][] arr){
