@@ -4,16 +4,19 @@ public class FindNextNodeInOrder_4_6 {
 	public Node find(Node root, Node nodeToBeFound){
 		if(root == null) return null;
 		if(root == nodeToBeFound)
-			if(root.right != null)
-				return getMostLeftOnRight(root.right);
-			else return new Node(Integer.MIN_VALUE);
-		else{
-			Node node = find(root.left, nodeToBeFound);
-			if(node == null)
-				return node;
-			else node = find(node.right, nodeToBeFound);
-			return node;
-		}
+			if(root.right == null) return new Node(Integer.MIN_VALUE);
+			else return getMostLeftOnRight(root.right);		
+		Node retNode = find(root.left, nodeToBeFound);
+		if(retNode == null){ // not found on left sub tree
+			retNode = find(root.right, nodeToBeFound);
+			if(retNode == null)
+				return null;
+			else 
+				return retNode;				
+		}else if (retNode.value == Integer.MIN_VALUE) // found the last node
+			return root;
+		else
+			return retNode;		
 	}
 	
 	public Node getMostLeftOnRight(Node node){
