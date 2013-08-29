@@ -15,7 +15,7 @@ public class Combination_9_4 {
 		combinations.add(new ArrayList<Integer>());
 		for(int value : arr){			
 			List<List<Integer>> tempCombinations = new ArrayList<List<Integer>>();	
-			tempCombinations.addAll(combinations);
+			//tempCombinations.addAll(combinations);
 			for(List<Integer> list: combinations){
 				//tempCombinations.add(new ArrayList<Integer>(list));
 				list.add(value);
