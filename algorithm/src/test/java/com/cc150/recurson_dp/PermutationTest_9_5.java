@@ -10,7 +10,7 @@ public class PermutationTest_9_5 {
 	@Test
 	public void testPermute(){
 		Permutation_9_5 per = new Permutation_9_5();
-		List<String> list = per.permute("abc");
+		List<String> list = per.permute("abcd");
 		System.out.println(list);
 	}
 }
