@@ -58,5 +58,3 @@ public class StackBox_9_10 {
 		}
 	}
 }
-
-
