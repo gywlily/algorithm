@@ -2,8 +2,6 @@ package com.cc150.recurson_dp;
 
 import java.util.HashMap;
 import java.util.Map;
-
-import org.junit.Ignore;
 import org.junit.Test;
 
 import com.cc150.recursion_dp.ChildGoUpStair_9_1;
