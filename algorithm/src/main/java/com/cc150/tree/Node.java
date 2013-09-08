@@ -6,4 +6,9 @@ public class Node {
 	public Node(int v){
 		value = v;
 	}
+	
+	@Override
+	public String toString(){
+		return String.valueOf(value);
+	}
 }

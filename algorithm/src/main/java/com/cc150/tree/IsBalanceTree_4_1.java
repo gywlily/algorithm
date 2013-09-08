@@ -2,7 +2,7 @@ package com.cc150.tree;
 
 public class IsBalanceTree_4_1 {
 	public boolean isBalance(Node root){
-		if(root == null) return false;
+		if(root == null) return true;
 		int left = getDepth(root.left);
 		int right = getDepth(root.right);
 		if(left < 0 || right < 0) return false;
