@@ -23,7 +23,22 @@ public class CreateListByTreeDepth_4_4 {
 			queue = list;
 		}
 		
-		return resultList;
+		return resultList;		
+	}
+	
+	public List<Node> createList(Node root){
+		if(root == null) return null;
+		LinkedList<Node> queue = new LinkedList<Node>(), resultList = new LinkedList<Node>();
+		queue.add(root);
+		while(!queue.isEmpty()){
+			Node node = queue.removeFirst();
+			if(node.left != null)
+				queue.add(node.left);
+			if(node.right != null)
+				queue.add(node.right);
+			resultList.add(node);
+		}
 		
+		return resultList;
 	}
 }

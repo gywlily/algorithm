@@ -18,6 +18,29 @@ public class IsBST_4_5 {
 		int max = root.value > pright.max ? root.value : pright.max;
 		return new Pair(min, max);
 	}
+	
+	public boolean anotherIsBst(Node root){
+		if(root == null) return true;
+		int left = anotherIsBst(root.left, 0);
+		int right = anotherIsBst(root.right, 1);
+		return (root.value > left && root.value <= right);
+	}
+	
+	/*
+	 * lr : left = 0, right = 1
+	 */
+	public int anotherIsBst(Node root, int lr){
+		if(root == null)
+			if(lr == 0)
+				return Integer.MIN_VALUE;
+			else
+				return Integer.MAX_VALUE;
+		int left = anotherIsBst(root.left, 0);
+		int right = anotherIsBst(root.right, 1);
+		if(root.value <= left || root.value > right)
+			return lr == 0 ? Integer.MAX_VALUE : Integer.MIN_VALUE;
+		return lr == 0 ? right == Integer.MAX_VALUE ? root.value : right : left == Integer.MIN_VALUE ? root.value : left;
+	}
 }
 
 class Pair

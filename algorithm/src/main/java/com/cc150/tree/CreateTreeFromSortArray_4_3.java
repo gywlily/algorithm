@@ -1,6 +1,12 @@
 package com.cc150.tree;
 
 public class CreateTreeFromSortArray_4_3 {
+	
+	public Node createBST(int[] arr){
+		if(arr == null || arr.length == 0) return null;
+		return createSubTree(arr, 0, arr.length - 1);
+	}
+	
 	public Node createTreeFromSortArray(int[] arr){
 		if(arr == null || arr.length == 0) return null;
 		int mid = (arr.length - 1) / 2;

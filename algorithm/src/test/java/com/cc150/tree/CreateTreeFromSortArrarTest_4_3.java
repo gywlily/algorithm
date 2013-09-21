@@ -4,12 +4,13 @@ import junit.framework.Assert;
 
 import org.junit.Test;
 
-public class CreateTreeFromSortArrarTest {
+public class CreateTreeFromSortArrarTest_4_3 {
 	@Test
 	public void testCreateTreeFromSortArray(){
 		CreateTreeFromSortArray_4_3 ctfa = new CreateTreeFromSortArray_4_3();
 		int[] arr = new int[]{1,2,3,4,5,6};
-		Node root = ctfa.createTreeFromSortArray(arr);
+		// Node root = ctfa.createTreeFromSortArray(arr);
+		Node root = ctfa.createBST(arr);
 		Node expect = new Node(3);
 		expect.left = new Node(1);
 		expect.left.right =new Node(2);
