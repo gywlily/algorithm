@@ -6,7 +6,7 @@ import org.junit.Test;
 import com.cc150.tree.IsBalanceTree_4_1;
 import com.cc150.tree.Node;
 
-public class IsBalenceTreeTest {
+public class IsBalenceTreeTest_4_1 {
 	@Test
 	public void testIsBalence(){
 		IsBalanceTree_4_1 ibt = new IsBalanceTree_4_1();
