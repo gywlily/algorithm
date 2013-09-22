@@ -1,5 +1,6 @@
 package com.cc150.recursion_dp;
 
+import java.util.List;
 import java.util.Map;
 
 public class ChildGoUpStair_9_1 {
@@ -49,5 +50,22 @@ public class ChildGoUpStair_9_1 {
 				count += getStepDP(n - 3, map);	
 		map.put(n, count);
 		return count;
+	}
+	
+	public long getStepDPOptimized(int n, List<String> list, String step, long[] cache){
+		if(n == 0){
+			list.add(step);
+			return 1;
+		}
+		if(cache[n - 1] >= 0) return cache[n - 1];
+		long a = 0, b = 0, c = 0;
+		if(n >= 1)
+			a = getStepDPOptimized(n - 1, list, step + ",1", cache);
+		if(n >= 2)
+			b = getStepDPOptimized(n - 2, list, step + ",2", cache);
+		if(n >= 3)
+			c = getStepDPOptimized(n - 3, list, step + ",3", cache);
+		cache[n - 1] = a + b + c;
+		return cache[n - 1];
 	}
 }

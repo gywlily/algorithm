@@ -1,4 +1,4 @@
-package com.cc150.recurson_dp;
+package com.cc150.recursion_dp;
 
 import java.util.ArrayList;
 
