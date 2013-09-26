@@ -3,23 +3,36 @@ package com.leetcode.list;
 public class ReverseNodeInKGroup {
 	public Node reverse(Node root, int n){
 		if(root == null) return null;		
-		Node leftEnd = null, midStart = root, midEnd = root, rightStart = root;
+		Node leftEnd = null, midStart,  midEnd,  newHead = null, rightStart = root;
 		while(true){
-			int count = 0;
+			int count = 1;
 			midStart = midEnd = rightStart;
 			while(count < n && midEnd.right != null){
 				count++;
 				midEnd = midEnd.right;				
 			}
 			rightStart = midEnd.right;
-			if(count == n)
+			Node start, end;
+			if(count == n){
 				reverse(midStart, midEnd);
-			midStart.right = leftEnd;			
-			leftEnd = midEnd; // 保存上一个n个node的最后一个元素
+				start = midEnd;
+				end = midStart;
+			} else {
+				start = midStart;
+				end = midEnd;
+			}
+			
+			if(newHead == null)
+				newHead = start;
+			if(leftEnd != null)
+				leftEnd.right = start;
+			// midStart.right = leftEnd;
+			leftEnd = end; // 保存上一个n个node的最后一个元素
 			if(rightStart == null)
 				break;
 		}
-		return midEnd;
+		leftEnd.right = null;
+		return newHead;
 	}
 	
 	private void reverse(Node left, Node right){
