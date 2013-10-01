@@ -1,14 +1,12 @@
 package com.cc150.recursion_dp;
 
 public class DivideMoney_9_8 {
-	public int divide(int[] cents, int index, int money){
-		int cur = cents[index];
-		if(cur == 1) return 1;
-		
-		int n = money / cur;
-		int count = 0;
+	public int divide(int[] cents, int index, int money, String s){
+		if(cents[index] == 1) {System.out.println(s); return 1;}
+		int n = money / cents[index], count = 0;
 		for(int i = n; i >= 0; i--){
-			count += divide(cents, index + 1, money - cur * i);
+			//System.out.println("x");
+			count += divide(cents, index + 1, money - cents[index] * i, s + "," + cents[index] + "x" + i);
 		}
 		return count;
 	}
