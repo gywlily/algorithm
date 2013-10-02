@@ -4,7 +4,7 @@ import java.util.Set;
 
 public class ChangeWordByChar_18_10 {
 	public void change(String word1, String word2, Set<String> dic){
-		int[] flags = new int[word1.length()];		
+		int[] flags = new int[word1.length()];
 		System.out.println(wordExist(word1.toCharArray(), word2.toCharArray(), dic, "", flags));
 	}
 	

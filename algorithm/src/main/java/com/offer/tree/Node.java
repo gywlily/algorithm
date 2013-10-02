@@ -1,4 +1,4 @@
-package com.offer;
+package com.offer.tree;
 
 public class Node {
 	int value = 0;
