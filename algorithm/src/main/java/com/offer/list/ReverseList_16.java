@@ -1,4 +1,4 @@
-package com.offer;
+package com.offer.list;
 
 public class ReverseList_16 {
 	public Node reverse(Node head){
@@ -15,7 +15,6 @@ public class ReverseList_16 {
 			if(right != null)
 				right = right.right;
 		}
-		
 		return left;
 	}
 }

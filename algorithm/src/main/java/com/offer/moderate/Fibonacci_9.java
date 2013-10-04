@@ -1,4 +1,4 @@
-package com.offer;
+package com.offer.moderate;
 
 public class Fibonacci_9 {
 	public int calc(int n){
