@@ -7,4 +7,14 @@ public class AddWithoutAddition_18_1 {
 		int carryOnly = (a & b) << 1;
 		return add(sumWithoutCarry, carryOnly);
 	}
+	
+	public int addLoop(int s, int c){
+		while(c != 0){
+			int a = s ^ c;
+			int b = s & c;
+			s = a;
+			c = b << 1;
+		}
+		return s;
+	}
 }

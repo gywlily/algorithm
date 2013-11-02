@@ -1,5 +1,7 @@
 package com.cc150.list;
 
+import java.util.Arrays;
+
 public class PartitionList_2_4 {
 	public Node partition(Node root, int x){
 		Node head = new Node(0), cur = new Node(0);
@@ -26,5 +28,39 @@ public class PartitionList_2_4 {
 			curNode1 = curNode1.right;
 		curNode1.right = cur.right;
 		return head.right;
+	}
+	
+	public Node partition2(Node head, int x){
+		Node[][] nodes = new Node[3][2];
+		Node cur = head;
+		while(cur != null){
+			if(cur.value == x){
+				insertNode(nodes, cur, 1);
+			} else if(cur.value < x){
+				insertNode(nodes, cur, 0);
+			} else 
+				insertNode(nodes, cur, 2);
+			cur = cur.right;
+		}
+		
+		if(nodes[0][1] != null){
+			if(nodes[1][0] != null)
+				nodes[0][1].right = nodes[1][0];
+			else
+				nodes[0][1].right = nodes[2][0];			
+		}
+		if(nodes[1][1] != null)
+			nodes[1][1].right = nodes[2][0];
+		return nodes[0][0] != null ? nodes[0][0] : nodes[1][0] != null ? nodes[1][0] : nodes[2][0];
+	}
+	
+	public void insertNode(Node[][] nodes, Node newNode, int index){
+		if(nodes[index][0] == null){
+			nodes[index][0] = newNode;
+			nodes[index][1] = newNode;
+		} else{
+			nodes[index][1].right=newNode;
+			nodes[index][1] = newNode;
+		}
 	}
 }

@@ -39,7 +39,10 @@ public class IsBST_4_5 {
 		int right = anotherIsBst(root.right, 1);
 		if(root.value <= left || root.value > right)
 			return lr == 0 ? Integer.MAX_VALUE : Integer.MIN_VALUE;
-		return lr == 0 ? right == Integer.MAX_VALUE ? root.value : right : left == Integer.MIN_VALUE ? root.value : left;
+		if(lr == 0) // left
+			return right == Integer.MAX_VALUE ? root.value : right;
+		else
+			return left == Integer.MIN_VALUE ? root.value : left;
 	}
 }
 

@@ -15,7 +15,6 @@ public class CountNumberOfTwo_18_4 {
 			right = cur * prop + right;
 			prop *= 10;
 		}
-		
 		return count;
 	}
 }

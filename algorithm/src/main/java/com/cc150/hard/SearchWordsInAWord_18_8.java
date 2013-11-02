@@ -31,7 +31,6 @@ public class SearchWordsInAWord_18_8 {
 				node = node.nodes[arr[j] - 'a'];
 			}
 		}
-		
 		return root;
 	}
 }

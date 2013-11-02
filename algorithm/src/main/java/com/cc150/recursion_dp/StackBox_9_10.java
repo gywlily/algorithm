@@ -13,6 +13,7 @@ public class StackBox_9_10 {
 			weight = w;
 			height = h;
 		}
+		@Override
 		public int compareTo(Box o) {
 			if(this.height < o.height)
 				return -1;
