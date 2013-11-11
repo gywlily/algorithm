@@ -6,7 +6,7 @@ import org.junit.Ignore;
 import org.junit.Test;
 
 public class DivideMoneyTest_9_8 {
-	static int money = 5;
+	static int money = 19;
 	@Test
 	public void testDivide(){
 		int[] cents = new int[]{25, 10, 5, 1};

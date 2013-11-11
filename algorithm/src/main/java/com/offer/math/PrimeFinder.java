@@ -1,11 +1,11 @@
-package com.cc150.moderate;
+package com.offer.math;
 
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
 public class PrimeFinder {
-	// 找出所有的小于n的质数
+	// 找出所有的小于n的质数的个数
 	public static int getNumberOfPrimes(int n) {
 	    if(n <= 0) return 0;
 	    int count = 0;
@@ -24,6 +24,7 @@ public class PrimeFinder {
     	return count;
     }
 	
+	// 返回所有小于等于n的质数
 	public List<Integer> find(int n){
 		List<Integer> list = new LinkedList<Integer>();
 		if(n < 2)

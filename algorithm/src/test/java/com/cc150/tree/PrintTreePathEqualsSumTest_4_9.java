@@ -16,7 +16,7 @@ public class PrintTreePathEqualsSumTest_4_9 {
 	private Node createTree(){
 		Node root = new Node(7);
 		root.right = new Node(3);
-		root.left = new Node(2);
+		root.left = new Node(2000000);
 		root.left.left = new Node(5);
 		root.left.left.right = new Node(10);
 		root.left.right = new Node(8);

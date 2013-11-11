@@ -9,11 +9,14 @@ public class FindNextNodeInOrder_4_6 {
 			else return getMostLeftOnRight(root.right);		
 		Node retNode = find(root.left, nodeToBeFound);
 		if(retNode == null){ // nodeToBeFound not found on left sub tree
-			retNode = find(root.right, nodeToBeFound); // searching right sub tree for nodeToBeFound
+			return find(root.right, nodeToBeFound); // searching right sub tree for nodeToBeFound
+			/*
+			retNode = find(root.right, nodeToBeFound); // searching right sub tree for nodeToBeFound			
 			if(retNode == null)
 				return null;
 			else // if the nodeToBeFound found on right subtree, then return retNode
-				return retNode;				
+				return retNode;
+			*/				
 		}else { // if the nodeToBeFound found on left subtree, 
 			if (retNode.value == Integer.MIN_VALUE) // nodeToBeFound has no right child
 				return root;  // return current node as 'next' node

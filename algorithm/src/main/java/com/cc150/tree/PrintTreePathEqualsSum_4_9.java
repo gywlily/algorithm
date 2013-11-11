@@ -32,7 +32,7 @@ public class PrintTreePathEqualsSum_4_9 {
 				curSum -= v;
 			}
 			if(root.value + curSum <= sum){
-				list.add(root.value);			
+				list.add(root.value);
 				curSum += root.value;
 				if(curSum == sum){
 					sumlist.add(list);

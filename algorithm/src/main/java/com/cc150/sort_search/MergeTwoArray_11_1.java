@@ -10,10 +10,8 @@ public class MergeTwoArray_11_1 {
 		}
 		int index2 = arr2.length - 1;
 		int index = index1 + 1 + index2;
-		while(true){
-			if(index1 < 0 || index2 < 0)
-				break;
-			else if(arr1[index1] >= arr2[index2])
+		while(index1 >= 0 || index2 >= 0){
+			if(arr1[index1] >= arr2[index2])
 				arr1[index] = arr1[index1--];
 			else
 				arr1[index] = arr2[index2--];
